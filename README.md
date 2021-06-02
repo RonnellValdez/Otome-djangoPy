@@ -26,4 +26,7 @@ A user should be able to:
  
  <h1>Main Page<img src="https://i.imgur.com/knz4ZfH.png"/></h1>
  
- <h1><img src="https://i.imgur.com/X2o8r6L.png"/></h1>
+ <h1><img src="https://i.imgur.com/X2o8r6L.png"/></h1><br>
+ 
+ <h2>Sprint 2: Conversation Between Users<h2><br>
+ <h2>Sprint 3: User Matching<h2><br>
