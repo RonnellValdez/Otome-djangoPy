@@ -1,19 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+
 body {
     background-image: url("https://i.imgur.com/Mxrahtq.png");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     
 }
 
+.navbar {
+    background: linear-gradient(to top, transparent 0%, black 150%);
+}
+
+.center_landing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    padding-top: 500px;
+}
+
 #Landing_header {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
     color: white;
     font-size: 75px;
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 .home_otome {
     color: white;
     font-size: 40px;
     text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    
 }
 
 .home_otome:visited {
     color: white;
   }
+
+a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.links {
+    font-size: 10px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    color: purple;
+}
+
+
+
+.Log_in_button {
+   position:absolute;
+   top:0;
+   right:0;
+   padding-top: 10px;
+   padding-right: 10px;
+   font-family: 'Ubuntu', sans-serif;
+   color: white;
+}
+
+#Sign_up_button {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#otome_navbar_logo {
+    padding-top: 10px;
+}

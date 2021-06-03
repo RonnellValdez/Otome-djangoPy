@@ -1,23 +1,17 @@
 {% extends 'base.html' %} 
 {% block content %}
-<div class="home_anchor">
-    <a class="home_otome" href="/">Otome</a>
-    <a href="/">
-        <img src="https://i.imgur.com/wLvK1sp.png" width="50" height="50">
-     </a>
+<div class="center_landing">
+    <h2 id="Landing_header" >Find Your Player Two</h2>
+    <a id="Sign_up_button" href="/Sign_up">Sign Up</a>
+    <div class="links">
+        <a class="ron-link" href="https://www.linkedin.com/in/ronnellvaldez/">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="ron-link" href="https://www.twitch.tv/a_wild_eggg">
+        <i class="fab fa-twitch"></i>
+        </a>
+    </div>
 </div>
 
-<h2 id="Landing_header" >Couch Co-op?</h2>
 
-<a class="Sign_up_button" href="/Sign_up">Sign Up</a>
-<a class="Log_in_button" href="/Sign_up">Log In</a>
-
-<div class="links">
-    <a class="ron-link" href="https://www.linkedin.com/in/ronnellvaldez/">
-        <i class="fab fa-linkedin fa-3x"></i>
-    </a>
-    <a class="ron-link" href="https://www.twitch.tv/a_wild_eggg">
-    <i class="fab fa-twitch fa-3x"></i>
-    </a>
-</div>
 {% endblock %}
