@@ -1,0 +1,19 @@
+body {
+    background-image: url("https://i.imgur.com/Mxrahtq.png");
+    
+}
+
+#Landing_header {
+    color: white;
+    font-size: 75px;
+}
+
+.home_otome {
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.home_otome:visited {
+    color: white;
+  }
