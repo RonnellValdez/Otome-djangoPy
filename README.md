@@ -20,7 +20,8 @@ A user should be able to:
 10. Update their profile by making changes to their name and/or current city.<br>
 
  
- <h1>Home Page<img src="https://i.imgur.com/4hLi7R3.png"/></h1>
+ <h1>Home Page Concept<img src="https://i.imgur.com/4hLi7R3.png"/></h1>
+ <h1>Home Page<img src="https://i.imgur.com/rOZdJxs.png"/></h1>
  
  <h1>Create User page<img src="https://i.imgur.com/DEYbzWS.png"/></h1>
  
