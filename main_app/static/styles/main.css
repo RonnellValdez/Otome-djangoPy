@@ -13,6 +13,10 @@ body {
     background: linear-gradient(to top, transparent 0%, black 150%);
 }
 
+#otome_navbar_logo{
+    padding-left: 10px;
+}
+
 .center_landing {
     display: flex;
     justify-content: center;
@@ -37,6 +41,7 @@ body {
     font-size: 40px;
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
+    padding-left: 20px;
     
 }
 
@@ -56,7 +61,6 @@ a {
     width: 50%;
     padding: 10px;
     text-align: center;
-    color: purple;
 }
 
 
@@ -66,18 +70,23 @@ a {
    top:0;
    right:0;
    padding-top: 10px;
-   padding-right: 10px;
+   padding-right: 20px;
    font-family: 'Ubuntu', sans-serif;
    color: white;
 }
 
-#Sign_up_button {
+#Sign_up_link {
     margin: auto;
-    width: 50%;
     padding: 10px;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background: red;
+    padding: 15px 25px;
+    background: linear-gradient(to right, rgb(134,61,255) , rgb(245,167,255));
+    border-radius: 30px;
 }
+
 
 #otome_navbar_logo {
     padding-top: 10px;
