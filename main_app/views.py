@@ -8,3 +8,9 @@ from django.views.generic.base import TemplateView
 # Here we will be creating a class called Home and extending it from the View class
 class Home(TemplateView):
     template_name = 'home.html'
+
+class Main(TemplateView):
+    template_name = 'main.html'
+
+class Sign_up(TemplateView):
+    template_name = 'sign_up.html'

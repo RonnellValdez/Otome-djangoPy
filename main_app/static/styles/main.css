@@ -6,7 +6,6 @@ body {
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    
 }
 
 .navbar {
@@ -91,3 +90,5 @@ a {
 #otome_navbar_logo {
     padding-top: 10px;
 }
+
+/* ============Main Page================ */
