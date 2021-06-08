@@ -31,8 +31,8 @@
         
         {% if user.is_authenticated %}
             <div class="navbar-menu navbar-end">
-                <span class="navbar-item">Welcome: {{user.username}}</span>
-                <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
+                <a id="name" href="/main_page/">{{user.username}}</a>
+                <a class="Log_in_button" href="{% url 'logout' %}">Logout</a>
             </div>
         {% else %}
             <div class="navbar-menu navbar-end">
