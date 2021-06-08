@@ -17,8 +17,14 @@ class Main(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["photos"] = Photos.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["photos"] = Photos.objects.filter(
+                name_icontains=name, user=self.request.user)
+        else:
+            context["photos"] = Photos.objects.filter(user=self.request.user)
         return context
+        
 
 class Sign_up(TemplateView):
     template_name = 'sign_up.html'

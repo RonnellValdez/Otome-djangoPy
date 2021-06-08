@@ -1,7 +1,7 @@
 {% extends 'base.html' %} 
 {% block content %}
 
-
+<h1>{{photos}}</h1>
 {% for img in photos %}
 <img src="{{photos.img}}" alt="{{photos.name}}" />
 {% endfor %}
