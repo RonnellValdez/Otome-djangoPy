@@ -1,10 +1,9 @@
 {% extends 'base.html' %} 
 {% block content %}
-<div class="Right_side">
-    <div class="img_main_card">
-        
-    </div>
-</div>
 
+
+{% for img in photos %}
+<img src="{{photos.img}}" alt="{{photos.name}}" />
+{% endfor %}
 
 {% endblock %}
