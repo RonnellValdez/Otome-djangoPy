@@ -2,9 +2,11 @@
 {% block content %}
 
 
-<div class="profile_card" style="float: left; width: 40%" class="user_card">
-    <h1>{{user.first_name}}</h1>
-    <!-- <a id="edit_icon" href="/accounts/edit_profile/">Edit</a> -->
+<div class="profile_card" style="float: left; width: 35%" class="user_card">
+    <h1 id="profile_name" >{{user.first_name}} {{user.last_name}}</h1>
+    <a id="edit_icon" href="/accounts/edit_profile_page/"><i class="fas fa-user-edit"></i>
+
+    </a>
         {% for img in photos %}
             <img id="user_images" src="{{img.img}}" alt="{{img.name}}" />
         {% endfor %}
@@ -13,10 +15,10 @@
         <h1>Discord: {{user.profile.discord}}</h1>
         {% endif %}
         {% if user.profile.twitch_url %}
-        <a class="user_links" href="{{user.profile.twitch_url}}">Twitch</a>
+        <a class="user_links" href="{{user.profile.twitch_url}}"><i class="fab fa-twitch">|</i></a>
         {% endif %}
         {% if user.profile.twitch_url %}
-        <a class="user_links" href="{{user.profile.youtube_url}}">Youtube</a>
+        <a class="user_links" href="{{user.profile.youtube_url}}"><i class="fab fa-youtube"></i>|</a>
         {% endif %}
         <h1>{{user.profile.bio}}</h1>
         
@@ -24,7 +26,7 @@
         
     </div>
 </div>
-<div style="float: right; width: 60%" class="matchmaking_card">
+<div style="float: right; width: 65%" class="matchmaking_card">
     <div class="match_card_image">
         <!-- <img src="https://pbs.twimg.com/media/DEpizzwUMAA9ws3.jpg" alt="stock gamer girl"> -->
     </div>

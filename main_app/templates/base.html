@@ -37,7 +37,7 @@
         {% if user.is_authenticated %}
             <div class="navbar-menu navbar-end">
                 <a id="name" href="/main_page/">{{user.username}}</a>
-                <a id="settings" href="/accounts/edit_profile/">Edit</a>
+                <a id="settings" href="/accounts/edit_profile/"><i class="fas fa-user-cog"></i></a>
                 <a class="Log_in_button" href="{% url 'logout' %}">Logout</a>
             </div>
         {% else %}

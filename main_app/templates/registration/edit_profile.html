@@ -3,9 +3,9 @@
 <h1 class="title">Edit Profile...</h1>
 {{ user.profile.bio }}
 
-<form method="post" action="{% url 'signup' %}">
+<form method="post">
   {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="Sign Up" />
+  <input type="submit" class="btn" value="Apply Changes" />
   <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
