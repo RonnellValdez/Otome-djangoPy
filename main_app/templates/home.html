@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div class="center_landing">
+    <h2 id="Landing_header" >Find Your Player Two</h2>
+    
+    
+    {% if user.is_authenticated %}
+        <a id="Sign_up_link" href="/main_page/">{{user.username}}</a>
+    {% else %}
+        <a id="Sign_up_link" href="/accounts/signup/">Sign Up</a>
+    {% endif %}
+    <div class="links">
+        <a class="ron-link" href="https://www.linkedin.com/in/ronnellvaldez/">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="ron-link" href="https://www.twitch.tv/a_wild_eggg">
+        <i class="fab fa-twitch"></i>
+        </a>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+
+body {
+    background-image: url("https://i.imgur.com/Mxrahtq.png");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.navbar {
+    background: linear-gradient(to top, transparent 0%, black 150%);
+}
+
+#otome_navbar_logo{
+    padding-left: 10px;
+}
+
+.center_landing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    padding-top: 500px;
+}
+
+#Landing_header {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 75px;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.home_otome {
+    color: whitesmoke;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 20px;
+    
+}
+
+.home_otome:visited {
+    color: whitesmoke;
+  }
+
+a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.links {
+    font-size: 10px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.Log_in_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(134,61,255);
+    padding: 1px 20px;
+    background: whitesmoke;
+    border-radius: 10px;
+    margin-top: 18px;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+#name {
+    position:absolute;
+    padding-top: 21px;
+    padding-right: 182px;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+#settings {
+    position:absolute;
+    padding-top: 21px;
+    padding-right: 140px;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+#Sign_up_link {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    background: red;
+    padding: 15px 25px;
+    background: linear-gradient(to right, rgb(134,61,255) , rgb(245,167,255));
+    border-radius: 30px;
+}
+
+
+#otome_navbar_logo {
+    padding-top: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+/* ============Main Page================ */
+#user_images {
+    max-width: 350px;
+    max-height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.user_card {
+    background: whitesmoke;
+    height: 100%;
+}
+
+.user_image_container {
+    background: indigo;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+.matchmaking_card {
+    background: yellow;
+    height: 100vh;
+}
+
+.profile_card {
+    height: 100vh;
+    background: lavender;
+}
+
+#profile_name {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    padding: 15px 25px;
+    background: linear-gradient(to right, rgb(134,61,255) , rgb(245,167,255));
+    font-size: 30px;
+}
+
+/* ================Forms=================== */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .gallery .card {
+    min-width: 150px;
+    max-width: 30%;
+    transition: 0.1s linear;
+  }
+
+
+  #modal_image {
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 150px;
+    padding-right: 10px;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
