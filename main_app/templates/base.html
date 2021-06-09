@@ -28,14 +28,28 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-        <div class="navbar-menu navbar-end">
-            <a class="Log_in_button" href="/Sign_up">Log In</a>
-        </div>
-      </nav>
-    <div class="container"> 
+        
+
+
+
+
+
+        {% if user.is_authenticated %}
+            <div class="navbar-menu navbar-end">
+                <a id="name" href="/main_page/">{{user.username}}</a>
+                <a class="Log_in_button" href="{% url 'logout' %}">Logout</a>
+            </div>
+        {% else %}
+            <div class="navbar-menu navbar-end">
+                <a class="Log_in_button" href="/accounts/login">Log In</a>
+            </div>
+        {% endif %}
+
+    </nav>
+    <!-- <div class="container is-max-widescreen">  -->
         {% block content %}
         
         {% endblock %}
-    </div>
+    <!-- </div> -->
 </body>
 </html>

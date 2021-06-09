@@ -1,0 +1,24 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+
+<div class="profile_card" style="float: left; width: 40%" class="user_card">
+    <h1>User</h1>
+        {% for img in photos %}
+            <img id="user_images" src="{{img.img}}" alt="{{img.name}}" />
+        {% endfor %}
+    <div class="user_info">
+        <h1>Bio</h1>
+        <h2>Gamer Tag</h2>
+        
+    </div>
+</div>
+<div style="float: right; width: 60%" class="matchmaking_card">
+    <div class="match_card_image">
+        <!-- <img src="https://pbs.twimg.com/media/DEpizzwUMAA9ws3.jpg" alt="stock gamer girl"> -->
+    </div>
+</div>
+
+
+
+{% endblock %}
