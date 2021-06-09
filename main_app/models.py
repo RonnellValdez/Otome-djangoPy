@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.base import Model
+from django.db.models.fields.related import OneToOneField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -11,9 +13,21 @@ class Photos(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
+    twitch_url = models.CharField(max_length=500, null=True, blank=True,)
+    youtube_url = models.CharField(max_length=500, null=True, blank=True,)
+    discord = models.CharField(max_length=500, null=True, blank=True,)
 
     def __str__(self):
         return self.name
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    bio = models.TextField()
+
+
+
+    def __str__(self):
+        return str(self.user)
 
 # class Profile(models.Model):
 #     user = models.OneToOneField(User, on_delete=models.CASCADE)

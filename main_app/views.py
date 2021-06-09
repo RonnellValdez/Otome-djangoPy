@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from django.views import View # <- View class to handle requests 
+from django.views import View, generic # <- View class to handle requests 
 from django.http import HttpResponse # <- a class to handle sending a type of response  
 from django.views.generic.base import TemplateView
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+from django.urls import reverse_lazy
 #import models
 from .models import Photos
 
@@ -42,4 +43,12 @@ class Signup(View):
             return redirect("/main_page/")
         else:
             return redirect("signup")
+
+class UserEditView(generic.UpdateView):
+    form_class = UserChangeForm
+    template_name = 'registration/edit_profile.html'
+    success_url = reverse_lazy('/main_page/')
+
+    def get_object(self):
+        return self.request.user
 

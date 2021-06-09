@@ -83,7 +83,16 @@ a {
 #name {
     position:absolute;
     padding-top: 21px;
-    padding-right: 145px;
+    padding-right: 182px;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+#settings {
+    position:absolute;
+    padding-top: 21px;
+    padding-right: 134px;
     font-family: 'Ubuntu', sans-serif;
     color: whitesmoke;
     font-size: 20px;
