@@ -7,7 +7,7 @@ from django.views.generic.base import TemplateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.urls import reverse_lazy
-from django.views.generic.edit import UpdateView, CreateView
+from django.views.generic.edit import UpdateView, CreateView, DeleteView
 #import models
 from .models import Photos, Profile
 
@@ -78,3 +78,13 @@ class AddPicture (CreateView):
 
     success_url = '/main_page/'
 
+class DeletePicture(DeleteView):
+    model = Photos
+    template_name = "delete_picture_confirm.html"
+    success_url = '/main_page/'
+    # reverse = '/main_page/'
+
+
+    # def get_success_url(self):
+    #     print(self.kwargs)
+    #     return reverse('/main_page/')

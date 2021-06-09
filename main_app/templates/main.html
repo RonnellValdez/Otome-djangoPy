@@ -22,21 +22,34 @@
         <h1>{{user.profile.bio}}</h1>
         
         <h2>Gamer Tag</h2>
-        {% for img in photos %}
-<img id="modal_image" src="{{img.img}}" alt="{{artist.name}}" />
+        
+{% for img in photos %}
+<div>
+    
+    <a href="{% url 'delete_picture' img.pk %}" class="button is-danger">
+        <span class="icon">
+            <i class="fas fa-trash-alt"></i>
+        </span>
+    </a>
+    
+    
+    <img id="modal_image" src="{{img.img}}" alt="{{artist.name}}" />
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
+
+    <!-- The Modal -->
+
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+    </div>
 </div>
-
 
 
 {% endfor %} 
         <a class="button is-dark" href="{% url 'add_picture' %}">+</a>
-    
+
+        
     </div>
 </div>
 <div style="float: right; width: 65%" class="matchmaking_card">
