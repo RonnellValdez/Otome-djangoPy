@@ -12,10 +12,6 @@ class Photos(models.Model):
     img = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    
-    twitch_url = models.CharField(max_length=500, null=True, blank=True,)
-    youtube_url = models.CharField(max_length=500, null=True, blank=True,)
-    discord = models.CharField(max_length=500, null=True, blank=True,)
 
     def __str__(self):
         return self.name
@@ -24,6 +20,9 @@ class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField()
 
+    twitch_url = models.CharField(max_length=500, null=True, blank=True,)
+    youtube_url = models.CharField(max_length=500, null=True, blank=True,)
+    discord = models.CharField(max_length=500, null=True, blank=True,)
 
 
     def __str__(self):

@@ -9,7 +9,17 @@
             <img id="user_images" src="{{img.img}}" alt="{{img.name}}" />
         {% endfor %}
     <div class="user_info">
+        {% if user.profile.discord %}
+        <h1>Discord: {{user.profile.discord}}</h1>
+        {% endif %}
+        {% if user.profile.twitch_url %}
+        <a class="user_links" href="{{user.profile.twitch_url}}">Twitch</a>
+        {% endif %}
+        {% if user.profile.twitch_url %}
+        <a class="user_links" href="{{user.profile.youtube_url}}">Youtube</a>
+        {% endif %}
         <h1>{{user.profile.bio}}</h1>
+        
         <h2>Gamer Tag</h2>
         
     </div>
