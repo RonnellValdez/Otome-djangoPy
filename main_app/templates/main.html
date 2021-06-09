@@ -5,11 +5,10 @@
 <div class="profile_card" style="float: left; width: 35%" class="user_card">
     <h1 id="profile_name" >{{user.first_name}} {{user.last_name}}</h1>
     <a id="edit_icon" href="/accounts/edit_profile_page/"><i class="fas fa-user-edit"></i>
-
     </a>
-        {% for img in photos %}
+        <!-- {% for img in photos %}
             <img id="user_images" src="{{img.img}}" alt="{{img.name}}" />
-        {% endfor %}
+        {% endfor %} -->
     <div class="user_info">
         {% if user.profile.discord %}
         <h1>Discord: {{user.profile.discord}}</h1>
@@ -23,7 +22,21 @@
         <h1>{{user.profile.bio}}</h1>
         
         <h2>Gamer Tag</h2>
-        
+        {% for img in photos %}
+<img id="modal_image" src="{{img.img}}" alt="{{artist.name}}" />
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+
+{% endfor %} 
+        <a class="button is-dark" href="{% url 'add_picture' %}">+</a>
+    
     </div>
 </div>
 <div style="float: right; width: 65%" class="matchmaking_card">

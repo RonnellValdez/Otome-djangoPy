@@ -7,7 +7,7 @@ from django.views.generic.base import TemplateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.urls import reverse_lazy
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView, CreateView
 #import models
 from .models import Photos, Profile
 
@@ -66,4 +66,15 @@ class EditProfilePageView(UpdateView):
     def get_object(self):
         return self.request.user.profile
 
+class AddPicture (CreateView):
+    model = Photos
+    fields = ['name', 'img']
+    template_name = "add_picture.html"
+
+        # This is our new method that will add the user into our submitted form
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(AddPicture, self).form_valid(form)
+
+    success_url = '/main_page/'
 
