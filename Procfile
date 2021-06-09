@@ -1,0 +1,1 @@
+web: gunicorn otome_project.wsgi
