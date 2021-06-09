@@ -1,14 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View # <- View class to handle requests 
 from django.http import HttpResponse # <- a class to handle sending a type of response  
 from django.views.generic.base import TemplateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-# Auth
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
-
-
 #import models
 from .models import Photos
 
@@ -18,7 +13,6 @@ from .models import Photos
 class Home(TemplateView):
     template_name = 'home.html'
 
-@method_decorator(login_required, name='dispatch')
 class Main(TemplateView):
     template_name = 'main.html'
 
@@ -45,6 +39,7 @@ class Signup(View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("artist_list")
+            return redirect("/main_page/")
         else:
             return redirect("signup")
+
