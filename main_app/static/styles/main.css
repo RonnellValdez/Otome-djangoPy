@@ -153,16 +153,17 @@ a {
 }
 
 #info_for_matchmaking {
-  background: pink;
+  background: rgb(51, 51, 51);
   margin-top: 10px;
   border: 3px solid green;
+  padding-top: 470px;
 }
 
 
 
 .profile_card {
     height: 100vh;
-    background: rgb(200,200,200);
+    background: rgb(18,18,18);
     border-radius: 15px;
 }
 
@@ -307,10 +308,13 @@ a {
 
   #youtube {
     color: red;
+    font-size: 30px;
   }
 
   #twitch {
     color: purple;
+    font-size: 30px;
+    margin-left: 10px;
   }
 
   .userlinks {
@@ -329,6 +333,23 @@ a {
     padding: 1px 10px;
     border-radius: 10px;
   }
+
+#discord {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#bio {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#follow {
+  color: white;
+  font-size: 16px;
+}
 
   /* ======================slides======================== */
   /* Slideshow container */
@@ -353,6 +374,26 @@ a {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
+
+/* Dummy Info */
+#dummy_name {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#dummy_bio {  
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#dummy_links {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
 
 /* Position the "next button" to the right */
 .next {
