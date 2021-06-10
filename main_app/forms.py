@@ -14,9 +14,9 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'first_name', 'last_name')
 
 class EditProfileForm(UserChangeForm):
-    username = forms.CharField(max_length=150, widget=forms.TextInput(attrs= {'class': 'input is-success'}))    
-    first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs= {'class': 'input is-success'}))
-    last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs= {'class': 'input is-success'}))
+    username = forms.CharField(max_length=150, widget=forms.TextInput)    
+    first_name = forms.CharField(max_length=100, widget=forms.TextInput)
+    last_name = forms.CharField(max_length=100, widget=forms.TextInput)
 
     class Meta(UserCreationForm.Meta):
         model = User
