@@ -2,29 +2,24 @@
 {% block content %}
 
 
-<div class="profile_card" style="float: left; width: 35%" class="user_card">
-    <h1 id="profile_name" >{{user.first_name}} {{user.last_name}}</h1>
-    <a id="edit_icon" href="/accounts/edit_profile_page/"><i class="fas fa-user-edit"></i>
-    </a>
-        <!-- {% for img in photos %}
-            <img id="user_images" src="{{img.img}}" alt="{{img.name}}" />
-        {% endfor %} -->
+<div class="profile_card" style="float: left; width: 30%" class="user_card">
+    <h1 id="profile_name" ><a id="edit_icon" href="/accounts/edit_profile_page/"><i id="user_profile_page_edit" class="fas fa-user-edit"></i></a> {{user.first_name}} {{user.last_name}}</h1>
     <div class="user_info">
         {% if user.profile.discord %}
-        <h1>Discord: {{user.profile.discord}}</h1>
+        <h1 id="discord">Discord: {{user.profile.discord}}</h1>
         {% endif %}
-        {% if user.profile.twitch_url %}
-        <a class="user_links" href="{{user.profile.twitch_url}}"><i class="fab fa-twitch">|</i></a>
-        {% endif %}
-        {% if user.profile.twitch_url %}
-        <a class="user_links" href="{{user.profile.youtube_url}}"><i class="fab fa-youtube"></i>|</a>
-        {% endif %}
-        <h1>{{user.profile.bio}}</h1>
-        
-        <h2>Gamer Tag</h2>
+        <div class="userlinks">
+            {% if user.profile.twitch_url %}
+                <a id="twitch" class="user_links" href="{{user.profile.twitch_url}}"><i class="fab fa-twitch">|</i></a>
+            {% endif %}
+            {% if user.profile.twitch_url %}
+                <a id="youtube" class="user_links" href="{{user.profile.youtube_url}}"><i class="fab fa-youtube"></i>|</a>
+            {% endif %}
+        </div>
+        <h1 id="bio" >{{user.profile.bio}}</h1>
         
 {% for img in photos %}
-<div>
+<div class="picture_cards">
     
     <a href="{% url 'delete_picture' img.pk %}" class="button is-danger">
         <span class="icon">
@@ -47,12 +42,12 @@
 
 
 {% endfor %} 
-        <a class="button is-dark" href="{% url 'add_picture' %}">+</a>
+        <a id="add_photo" class="button is-dark" href="{% url 'add_picture' %}">+</a>
 
         
     </div>
 </div>
-<div style="float: right; width: 65%" class="matchmaking_card">
+<div style="float: right; width: 70%" class="matchmaking_card">
     <div class="match_card_image">
         <!-- <img src="https://pbs.twimg.com/media/DEpizzwUMAA9ws3.jpg" alt="stock gamer girl"> -->
     </div>

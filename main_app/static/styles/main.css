@@ -141,13 +141,14 @@ a {
 }
 
 .matchmaking_card {
-    background: yellow;
+    background: rgb(26,26,26);
     height: 100vh;
 }
 
 .profile_card {
     height: 100vh;
-    background: lavender;
+    background: rgb(200,200,200);
+    border-radius: 15px;
 }
 
 #profile_name {
@@ -159,6 +160,7 @@ a {
     padding: 15px 25px;
     background: linear-gradient(to right, rgb(134,61,255) , rgb(245,167,255));
     font-size: 30px;
+    border-radius: 10px 100px / 0px;
 }
 
 /* ================Forms=================== */
@@ -183,6 +185,7 @@ a {
     transition: 0.3s;
     width: 150px;
     padding-right: 10px;
+    margin-left: 10px;
   }
   
   #myImg:hover {opacity: 0.7;}
@@ -243,7 +246,7 @@ a {
   /* The Close Button */
   .close {
     position: absolute;
-    top: 15px;
+    top: 40px;
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;
@@ -263,4 +266,41 @@ a {
     .modal-content {
       width: 100%;
     }
+  }
+
+  .picture_cards {
+    padding-left: 10px;
+    background: gray;
+    border: 3px solid green;
+    width: 221px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  #bio {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  #user_profile_page_edit {
+    text-align: left;
+  }
+
+  #youtube {
+    color: red;
+  }
+
+  #twitch {
+    color: purple;
+  }
+
+  .userlinks {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  #add_photo {
+    margin-left: 10px;
   }
