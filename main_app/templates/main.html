@@ -39,8 +39,6 @@
     <div id="caption"></div>
     </div>
 </div>
-
-
 {% endfor %} 
         <a id="add_photo" class="button is-dark" href="{% url 'add_picture' %}">+</a>
 
@@ -48,11 +46,41 @@
     </div>
 </div>
 <div style="float: right; width: 70%" class="matchmaking_card">
-    <div class="match_card_image">
-        <!-- <img src="https://pbs.twimg.com/media/DEpizzwUMAA9ws3.jpg" alt="stock gamer girl"> -->
+    <div class="card_within_matchmaking">
+        <div id="info_for_matchmaking" style="float: right; width: 30%">
+            <h1>Valkyrae</h1>
+            <h1>Bio: Member of 100 thieves and god tier among us player!
+            </h1>
+        </div>
+        <div class="match_card_image" style="float: left; width: 70%">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img id="slid_images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Valkyrae_for_100_Thieves_%28cropped%29.jpg/1200px-Valkyrae_for_100_Thieves_%28cropped%29.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+                </div>
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img id="slid_images" src="https://storage.googleapis.com/ares-profile-pictures/hd/valkyrae-4a93e8bb120ea0e40fbafd5e3cf73295_hd.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img id="slid_images" src="https://static01.nyt.com/images/2021/04/11/fashion/07valkyrae1/07valkyrae1-mobileMasterAt3x.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+                <br>
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+        </div>
     </div>
 </div>
-
 
 
 {% endblock %}

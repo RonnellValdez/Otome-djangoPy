@@ -18,7 +18,7 @@ class Photos(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    bio = models.TextField()
+    bio = models.TextField(null=True, blank=True)
 
     twitch_url = models.CharField(max_length=500, null=True, blank=True,)
     youtube_url = models.CharField(max_length=500, null=True, blank=True,)
