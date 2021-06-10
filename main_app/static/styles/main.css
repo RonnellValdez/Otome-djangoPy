@@ -322,6 +322,12 @@ a {
   
   #add_photo {
     margin-left: 10px;
+    margin-top: 10px;
+    color: rgb(134,61,255);
+    background: whitesmoke;
+    font-size: 30px;
+    padding: 1px 10px;
+    border-radius: 10px;
   }
 
   /* ======================slides======================== */
@@ -453,4 +459,10 @@ a {
 
 #id_password1 {
   margin-left: 5px;
+}
+
+/* Add Photo Stuff */
+
+#id_img {
+  margin-left: 15px;
 }
