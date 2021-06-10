@@ -9,6 +9,7 @@
         <h1 id="discord">Discord: {{user.profile.discord}}</h1>
         {% endif %}
         <div class="userlinks">
+            <h2 id="follow" >Follow Me On: </h2>
             {% if user.profile.twitch_url %}
                 <a id="twitch" class="user_links" href="{{user.profile.twitch_url}}"><i class="fab fa-twitch">|</i></a>
             {% endif %}
@@ -40,7 +41,7 @@
     </div>
 </div>
 {% endfor %} 
-        <a id="add_photo" class="button is-dark" href="{% url 'add_picture' %}">+</a>
+        <a id="add_photo"  href="{% url 'add_picture' %}">+</a>
 
         
     </div>
@@ -48,8 +49,14 @@
 <div style="float: right; width: 70%" class="matchmaking_card">
     <div class="card_within_matchmaking">
         <div id="info_for_matchmaking" style="float: right; width: 30%">
-            <h1>Valkyrae</h1>
-            <h1>Bio: Member of 100 thieves and god tier among us player!
+            
+            <h1 id="dummy_name">Rachell Hofstetter</h1>
+            <h1 id="dummy_name" >Discord: Valkyrae</h1>
+            <h1 id="dummy_links">Follow Me On <a id="twitch" class="user_links" href="https://www.twitch.tv/valkyrae"><i class="fab fa-twitch">|</i></a>
+            
+                <a id="youtube" class="user_links" href="https://www.youtube.com/channel/UCWxlUwW9BgGISaakjGM37aw"><i class="fab fa-youtube"></i>|</a>
+            </h1>
+            <h1 id="dummy_bio" >Bio: Member of 100 thieves and god tier among us player!
             </h1>
         </div>
         <div class="match_card_image" style="float: left; width: 70%">

@@ -46,7 +46,8 @@ class Signup(View):
             login(request, user)
             return redirect("/main_page/")
         else:
-            return redirect("signup")
+            context = {"form": form}
+            return render(request, "registration/signup.html", context)
 
 class UserEditView(UpdateView):
     form_class = EditProfileForm
@@ -61,7 +62,7 @@ class UserEditView(UpdateView):
 class EditProfilePageView(UpdateView):
     model = Profile
     template_name = 'registration/edit_profile_page.html'
-    fields = ['bio', 'twitch_url', 'youtube_url', 'discord']
+    fields = ['twitch_url', 'youtube_url', 'discord', 'bio']
     success_url = '/main_page/'
 
     def get_object(self):
@@ -84,8 +85,3 @@ class DeletePicture(DeleteView):
     template_name = "delete_picture_confirm.html"
     success_url = '/main_page/'
     # reverse = '/main_page/'
-
-
-    # def get_success_url(self):
-    #     print(self.kwargs)
-    #     return reverse('/main_page/')
