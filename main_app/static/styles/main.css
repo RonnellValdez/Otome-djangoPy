@@ -570,3 +570,15 @@ a {
 .profile_setting_form > #id_password {
   visibility: hidden;
 }
+
+/* Delete Picture Stuff */
+
+.delete_picture_form{
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+
+#title_for_delete {
+  color: whitesmoke;
+}

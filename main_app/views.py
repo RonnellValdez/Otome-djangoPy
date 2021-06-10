@@ -85,8 +85,3 @@ class DeletePicture(DeleteView):
     template_name = "delete_picture_confirm.html"
     success_url = '/main_page/'
     # reverse = '/main_page/'
-
-
-    # def get_success_url(self):
-    #     print(self.kwargs)
-    #     return reverse('/main_page/')
