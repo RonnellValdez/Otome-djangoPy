@@ -436,6 +436,17 @@ a {
   color: white;
 }
 
+#sign_up_in_login{
+  color: whitesmoke;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+#sign_up_login_link {
+  font-size: 16px;
+  color:rgb(134,61,255);
+}
+
 #id_password {
   margin-left: 5px;
   margin-top: 10px;
@@ -501,9 +512,20 @@ a {
   margin-top: 10px;
 }
 
-.helptext {
+/* .helptext {
   visibility: hidden;
+} */
+
+.helptext > a {
+  font-size: 21px;
 }
 
-#id_password {
+.profile_setting_form {
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.profile_setting_form > #id_password {
+  visibility: hidden;
 }

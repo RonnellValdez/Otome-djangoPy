@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="login">
+<div class="profile_setting_form">
   <h1 id="title" class="title">Profile Settings</h1>
   <form method="post">
     {% csrf_token %} {{ form.as_p }}
