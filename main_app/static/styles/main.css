@@ -438,6 +438,7 @@ a {
 
 #id_password {
   margin-left: 5px;
+  margin-top: 10px;
 }
 
 #title {
@@ -459,10 +460,51 @@ a {
 
 #id_password1 {
   margin-left: 5px;
+  margin-top: 10px;
+}
+
+.errorlist {
+  color: red;
+  margin-left: 10px;
 }
 
 /* Add Photo Stuff */
 
 #id_img {
-  margin-left: 15px;
+  margin-top: 10px;
+}
+
+/* Edit Profile Page Stuff */
+
+#id_discord {
+  margin-left: 27px;
+  margin-top: 10px;
+}
+
+#id_twitch_url {
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+
+#id_bio {
+  margin-top: 10px;
+  margin-left: 58px;
+}
+
+/* Profile Settings Stuff */
+
+#id_last_name {
+  margin-top: 10px;
+}
+
+#id_first_name {
+  margin-top: 10px;
+}
+
+.helptext {
+  visibility: hidden;
+}
+
+#id_password {
+  visibility: hidden;
 }

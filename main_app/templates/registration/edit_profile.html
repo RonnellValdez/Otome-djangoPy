@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="login">
-  <h1 id="title" class="title">Edit Profile...</h1>
+  <h1 id="title" class="title">Profile Settings</h1>
   <form method="post">
     {% csrf_token %} {{ form.as_p }}
     <input id="log_in_submit" type="submit" class="btn" value="Apply Changes" />
