@@ -8,6 +8,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
+from .forms import EditProfileForm
 #import models
 from .models import Photos, Profile
 
@@ -48,7 +49,7 @@ class Signup(View):
             return redirect("signup")
 
 class UserEditView(UpdateView):
-    form_class = UserChangeForm
+    form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = '/main_page/'
 

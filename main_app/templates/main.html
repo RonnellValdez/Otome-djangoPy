@@ -2,29 +2,24 @@
 {% block content %}
 
 
-<div class="profile_card" style="float: left; width: 35%" class="user_card">
-    <h1 id="profile_name" >{{user.first_name}} {{user.last_name}}</h1>
-    <a id="edit_icon" href="/accounts/edit_profile_page/"><i class="fas fa-user-edit"></i>
-    </a>
-        <!-- {% for img in photos %}
-            <img id="user_images" src="{{img.img}}" alt="{{img.name}}" />
-        {% endfor %} -->
+<div class="profile_card" style="float: left; width: 30%" class="user_card">
+    <h1 id="profile_name" ><a id="edit_icon" href="/accounts/edit_profile_page/"><i id="user_profile_page_edit" class="fas fa-user-edit"></i></a> {{user.first_name}} {{user.last_name}}</h1>
     <div class="user_info">
         {% if user.profile.discord %}
-        <h1>Discord: {{user.profile.discord}}</h1>
+        <h1 id="discord">Discord: {{user.profile.discord}}</h1>
         {% endif %}
-        {% if user.profile.twitch_url %}
-        <a class="user_links" href="{{user.profile.twitch_url}}"><i class="fab fa-twitch">|</i></a>
-        {% endif %}
-        {% if user.profile.twitch_url %}
-        <a class="user_links" href="{{user.profile.youtube_url}}"><i class="fab fa-youtube"></i>|</a>
-        {% endif %}
-        <h1>{{user.profile.bio}}</h1>
-        
-        <h2>Gamer Tag</h2>
+        <div class="userlinks">
+            {% if user.profile.twitch_url %}
+                <a id="twitch" class="user_links" href="{{user.profile.twitch_url}}"><i class="fab fa-twitch">|</i></a>
+            {% endif %}
+            {% if user.profile.twitch_url %}
+                <a id="youtube" class="user_links" href="{{user.profile.youtube_url}}"><i class="fab fa-youtube"></i>|</a>
+            {% endif %}
+        </div>
+        <h1 id="bio" >{{user.profile.bio}}</h1>
         
 {% for img in photos %}
-<div>
+<div class="picture_cards">
     
     <a href="{% url 'delete_picture' img.pk %}" class="button is-danger">
         <span class="icon">
@@ -44,20 +39,48 @@
     <div id="caption"></div>
     </div>
 </div>
-
-
 {% endfor %} 
-        <a class="button is-dark" href="{% url 'add_picture' %}">+</a>
+        <a id="add_photo" class="button is-dark" href="{% url 'add_picture' %}">+</a>
 
         
     </div>
 </div>
-<div style="float: right; width: 65%" class="matchmaking_card">
-    <div class="match_card_image">
-        <!-- <img src="https://pbs.twimg.com/media/DEpizzwUMAA9ws3.jpg" alt="stock gamer girl"> -->
+<div style="float: right; width: 70%" class="matchmaking_card">
+    <div class="card_within_matchmaking">
+        <div id="info_for_matchmaking" style="float: right; width: 30%">
+            <h1>Valkyrae</h1>
+            <h1>Bio: Member of 100 thieves and god tier among us player!
+            </h1>
+        </div>
+        <div class="match_card_image" style="float: left; width: 70%">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img id="slid_images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Valkyrae_for_100_Thieves_%28cropped%29.jpg/1200px-Valkyrae_for_100_Thieves_%28cropped%29.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+                </div>
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img id="slid_images" src="https://storage.googleapis.com/ares-profile-pictures/hd/valkyrae-4a93e8bb120ea0e40fbafd5e3cf73295_hd.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img id="slid_images" src="https://static01.nyt.com/images/2021/04/11/fashion/07valkyrae1/07valkyrae1-mobileMasterAt3x.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+                <br>
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+        </div>
     </div>
 </div>
-
 
 
 {% endblock %}

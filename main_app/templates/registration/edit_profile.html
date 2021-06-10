@@ -1,12 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="title">Edit Profile...</h1>
-{{ user.profile.bio }}
-
-<form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="Apply Changes" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
+<div class="login">
+  <h1 id="title" class="title">Edit Profile...</h1>
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <input id="log_in_submit" type="submit" class="btn" value="Apply Changes" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+</div>
 
 {% endblock %}
